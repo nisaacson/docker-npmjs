@@ -15,10 +15,13 @@ RUN sudo apt-get install -y nodejs
 RUN sudo apt-add-repository ppa:nilya/couchdb-1.3
 RUN sudo apt-get update
 RUN sudo apt-get install -y couchdb
-RUN sudo apt-get install -y curl wget git
+RUN sudo apt-get install -y git
+RUN sudo apt-get install -y curl wget
+RUN sudo apt-get install -y wget
 RUN npm install -g npm
-RUN echo "install couchapp"
+RUN echo "try: install couchapp"
 RUN npm install -g couchapp
+RUN echo "success: install couchapp"
 
 ADD scripts/setup.sh /root/setup-npm.sh
 RUN /root/setup-npm.sh

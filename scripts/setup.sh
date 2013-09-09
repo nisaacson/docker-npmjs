@@ -28,7 +28,7 @@ npm install semver
 sudo service couchdb start
 echo "sleep until couchdb is online"
 sleep '5s'
-URL=localhost:5948
+URL=localhost:5984
 while true
 do
   echo "try to connect to couchdb at url $URL"
